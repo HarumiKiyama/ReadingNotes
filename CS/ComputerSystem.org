@@ -58,18 +58,59 @@ name: .ASCII "WLC\x00"
 .END
 #+END_SRC
 *** 写出对应C++程序的汇编
-#+BEGIN_SRC C++
+#+NAME: 24题
+#+BEGIN_SRC C++ 
   #include <iostream>
   using namespace std;
   int num1;
   int num2;
-  int main(){
-  cin>>num1>>num2;
-  cout<<num2<<endl<<num1<<endl;
-  return 0;
+  int main() {
+    cin >> num1 >> num2;
+    cout << num2 << endl << num1 << endl;
+    return 0;
   }
 #+END_SRC
 
+#+NAME: 24题
+#+BEGIN_SRC pep8
+DECI num1,d
+DECI num2,d
+DECO num2,d
+CHARO '\n',i
+DECO num1,d
+CHARO '\n',i
+num1: .BLOCK 2
+num2: .BLOCK 2
+.END
+#+END_SRC
+
+#+NAME 25题
+#+BEGIN_SRC C++
+  #include <iostream>
+  using namespace std;
+  const char chConst = 'a';
+  char ch1;
+  char ch2;
+  int main() {
+    cin >> ch1 >> ch2;
+    cout << ch1 << chConst << ch2;
+    return 0;
+  }
+#+END_SRC
+
+#+NAME 25题
+#+BEGIN_SRC pep8
+CHARI ch1,d
+CHARI ch2,d
+CHARO ch1,d
+CHARO chConst,i
+CHARO ch2,d
+chConst: .EQUATE 'a'
+ch1: .BLOCK 1
+ch2: .BLOCK 1
+.END
+#+END_SRC
+*** TODO 数值计算
 * 阅读的目的
 理解计算机的工作原理,使自己能够写出更好的代码
 * 吐槽
