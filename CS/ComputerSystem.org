@@ -50,6 +50,26 @@ do{
 ** LG1 层(逻辑门层)
 ** Mc2 层(微代码层)
 * 习题集
+** Chapter 5
+*** 输出自己的姓名
+#+BEGIN_SRC pep8
+STRO name,d 
+name: .ASCII "WLC\x00"
+.END
+#+END_SRC
+*** 写出对应C++程序的汇编
+#+BEGIN_SRC C++
+  #include <iostream>
+  using namespace std;
+  int num1;
+  int num2;
+  int main(){
+  cin>>num1>>num2;
+  cout<<num2<<endl<<num1<<endl;
+  return 0;
+  }
+#+END_SRC
+
 * 阅读的目的
 理解计算机的工作原理,使自己能够写出更好的代码
 * 吐槽
