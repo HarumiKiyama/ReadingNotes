@@ -79,6 +79,7 @@ DECO num2,d
 CHARO '\n',i
 DECO num1,d
 CHARO '\n',i
+STOP
 num1: .BLOCK 2
 num2: .BLOCK 2
 .END
@@ -105,12 +106,59 @@ CHARI ch2,d
 CHARO ch1,d
 CHARO chConst,i
 CHARO ch2,d
+STOP
 chConst: .EQUATE 'a'
 ch1: .BLOCK 1
 ch2: .BLOCK 1
 .END
 #+END_SRC
-*** TODO 数值计算
+*** 数值计算
+#+BEGIN_SRC C++
+  #include <iostream>
+  using namespace std;
+  int width;
+  int length;
+  int perim;
+
+  int main() {
+    cin >> width >> length;
+    perim = (width + length) / 2;
+    cout << "w = " << width << endl;
+    cout << "l = " << length << endl;
+    cout << endl;
+    cout << "p = " << perim << endl;
+    return 0;
+  }
+#+END_SRC
+
+#+BEGIN_SRC pep8
+DECI width,d
+DECI length,d
+LDA width,d
+ADDA length,d
+ASRA
+STA perim,d
+STRO w,d
+DECO width,d
+CHARO endl,i
+STRO l,d
+DECO length,d
+CHARO endl,i
+CHARO endl,i
+STRO p,d
+DECO perim,d
+CHARO endl,i
+STOP
+width: .block 2
+length: .block 2
+perim: .block 2
+w: .ascii "w = \x00"
+l: .ascii "l = \x00"
+p: .ascii "p = \x00"
+endl: .equate "\n"
+.END
+#+END_SRC
+** Chapter 6
 * 阅读的目的
 理解计算机的工作原理,使自己能够写出更好的代码
 * 吐槽
