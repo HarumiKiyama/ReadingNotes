@@ -112,7 +112,6 @@ C++层面的函数调用如何在汇编层面完成
   访问结点字段的指令使用栈变址间接寻址的
 *** 语言翻译原理
 计算机科学的基本问题,什么能够被自动化
-
 ** OS4 层(操作系统层)
 *** 进程管理
 *** 储存管理
@@ -233,6 +232,32 @@ endl: .equate "\n"
 #+END_SRC
 ** Chapter 6
 *** 18题
+将C++程序转换为pep/8程序
+#+BEGIN_SRC cpp
+  #include <iostream>
+  using namespace std;
+
+  int times(int mpr, int mcand) {
+    if (mpr == 0) {
+      return 0;
+    } else if (mpr % 2 == 1) {
+      return times(mpr / 2, mcand * 2);
+    } else {
+      return times(mpr / 2, mcand * 2);
+    }
+  }
+
+  int main() {
+    int n, m;
+    cin >> n >> m;
+    cout << "Product: " << times(n, m) << endl;
+    return 0;
+  }
+#+END_SRC
+
+#+BEGIN_SRC pep8
+
+#+END_SRC
 *** 21题
 *** 22题
 *** 23题
