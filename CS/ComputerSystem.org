@@ -241,7 +241,7 @@ endl: .equate "\n"
     if (mpr == 0) {
       return 0;
     } else if (mpr % 2 == 1) {
-      return times(mpr / 2, mcand * 2);
+      return times(mpr / 2, mcand * 2) + mcand;
     } else {
       return times(mpr / 2, mcand * 2);
     }
@@ -250,18 +250,70 @@ endl: .equate "\n"
   int main() {
     int n, m;
     cin >> n >> m;
-    cout << "Product: " << times(n, m) << endl;
+    cout << "Product: " << times(12, 12) << endl;
     return 0;
   }
 #+END_SRC
 
 #+BEGIN_SRC pep8
-
+n:  .EQUATE 2
+m:  .EQUATE 0
+main: SUBSP 4,i
+    DECI n,s
+    DECI m,s
+    STRO product,d
+    LDA n,s
+    STA -4,s
+    LDA m,s
+    STA -6,s
+    SUBSP 6,i                   ;allocate mpr,mcand,retVal
+    CALL times
+    ADDSP 6,i
+    DECO -2,s
+    CHARO '\n',i
+    STOP
+product:    .ASCII "Product: \x00"
+    ;; int times (int mpr, int mcand)
+retVal: .EQUATE 6               ;retVal #2d
+mpr:    .EQUATE 4               ;mpr #2d
+mcand:  .EQUATE 2               ;mcand #2d
+times:  LDA mpr,s               ;if (mpr==0){}
+    BRNE elif                   ;
+    LDA 0,i
+    STA retVal,s
+    RET0
+elif:   LDA mpr,s               ;else if(mpr%2==1){}
+    ANDA 0x0001,i
+    CPA 1,i
+    BRNE else
+    LDA mpr,s                   ;times(mpr/2,mcand*2)
+    ASRA
+    STA -4,s
+    LDA mcand,s
+    ASLA
+    STA -6,s
+    SUBSP 6,i
+    CALL times
+    ADDSP 6,i
+    LDA -2,s
+    ADDA mcand,s
+    STA retVal,s
+    RET0
+else:   LDA mpr,s                   ;times(mpr/2,mcand*2)
+    ASRA
+    STA -4,s
+    LDA mcand,s
+    ASLA
+    STA -6,s
+    SUBSP 6,i
+    CALL times
+    ADDSP 6,i
+    LDA -2,s
+    STA retVal,s
+    RET0
+.END
 #+END_SRC
-*** 21题
-*** 22题
 *** 23题
-*** 26题
 *** 27题
 *** 29题
 *** 32题
