@@ -314,6 +314,72 @@ else:   LDA mpr,s                   ;times(mpr/2,mcand*2)
 .END
 #+END_SRC
 *** 23题
+c++ 翻译到 pep8
+#+BEGIN_SRC cpp
+  #include <iostream>
+  using namespace std;
+
+  int binCoeff(int n, int k) {
+    if ((k == 0) || (n == k)) {
+      return 1;
+    } else {
+      return binCoeff(n - 1, k) + binCoeff(n - 1, k - 1);
+    }
+  }
+
+  int main() {
+    cout << binCoeff(3, 1) << "\n";
+    return 0;
+  }
+#+END_SRC
+
+#+RESULTS:
+: 3
+#+BEGIN_SRC pep8
+main:   LDA 3,i
+    STA -4,s
+    LDA 1,i
+    STA -6,s
+    SUBSP 6,i
+    CALL binCoeff
+    ADDSP 6,i
+    DECO -2,s
+    CHARO '\n',i
+    STOP
+    ;; int binCoeff(int n,int k)
+retVal: .EQUATE 6               ;retVal #2d
+n:  .EQUATE 4
+k:  .EQUATE 2
+binCoeff:   LDA k,s
+    BREQ then
+    CPA n,s
+    BRNE else
+then:   LDA 1,i
+	    STA retVal,s
+	    RET0
+else:   LDA n,s
+    SUBA 1,i
+    STA -4,s
+    LDA k,s
+    STA -6,s
+    SUBSP 6,i
+    CALL binCoeff
+    ADDSP 6,i
+    LDA n,s
+    SUBA 1,i
+    STA -6,s
+    LDA k,s
+    SUBA 1,i
+    STA -8,s
+    SUBSP 8,i
+    CALL binCoeff
+    ADDSP 8,i
+    LDA -4,s
+    ADDA -2,s
+    STA retVal,s
+    RET0
+.END
+#+END_SRC
 *** 27题
 *** 29题
 *** 32题
