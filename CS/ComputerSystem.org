@@ -381,12 +381,44 @@ else:   LDA n,s
 .END
 #+END_SRC
 *** 27题
+C++ 翻译为 pep8
+#+BEGIN_SRC cpp
+  #include <iostream>
+  using namespace std;
+  int list[16];
+  int j, numItems;
+  int temp;
+
+  int main() {
+    cin >> numItems;
+    temp = list[0];
+    for (j = 0; j < numItems; j++) {
+      cin >> list[j];
+    }
+    temp = list[0];
+    for (j = 0; j < numItems; j++) {
+      list[j] = list[j + 1];
+    }
+    list[numItems - 1] = temp;
+    for (j = 0; j < numItems; j++) {
+      cout << list[j] << ' ';
+    }
+    cout << endl;
+    return 0;
+  }
+#+END_SRC
+
+#+BEGIN_SRC pep8
+
+#+END_SRC
 *** 29题
 *** 32题
 *** 40题
 *** 41题
+这个项目考虑用Haskell来写
 * 阅读的目的
 理解计算机的工作原理,使自己能够写出更好的代码
+考虑到是综述性质的书籍,故习题只做到第六章,第七章以及八,九章是编译原理和操作系统的部分,打算更加深入的学习,直接看编译原理和现代操作系统并且做上面的习题.第十章到第十二章只打算快速过一遍,太过底层的东西,不太感兴趣
 * 吐槽
 在网上下的pep8的模拟软件在archlinux上不知道为什么完全不能用,只好把源代码下载下来,自己编译了,貌似因为写的时候比较早,必须修改头文件才能通过clang++的编译.
 书籍的图有很多地方都有点问题.比如pep8的结构图,看来以后还是尽量多看英文书吧.
