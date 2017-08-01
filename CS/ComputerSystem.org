@@ -424,6 +424,56 @@ C++ 翻译为 pep8
 #+END_SRC
 
 #+BEGIN_SRC pep8
+main:   DECI numItems,d
+    LDX 0,i
+    STX j,d
+for1:   CPX numItems,d
+    BRGE endfor1
+    ASLX
+    DECI list,x
+    LDX j,d
+    ADDX 1,i
+    STX j,d
+    BR for1
+endfor1:    LDX 0,i
+    LDA list,x
+    STA temp,d
+    LDX 0,i
+    STX j,d
+for2:   ADDX 1,i
+    CPX numItems,d
+    BRGE endfor2
+    ASLX
+    LDA list,x
+    SUBX 2,i
+    STA list,x
+    LDX j,d
+    ADDX 1,i
+    STX j,d
+    BR for2
+endfor2:    LDA temp,d
+    LDX numItems,d
+    SUBX 1,i
+    ASLX
+    STA list,x
+    LDX 0,i
+    STX j,d
+for3:   CPX numItems,d
+    BRGE endfor3
+    ASLX
+    DECO list,x
+    CHARO ' ',i
+    LDX j,d
+    ADDX 1,i
+    STX j,d
+    BR for3
+endfor3:    CHARO "\n",i
+    STOP
+list:   .BLOCK 32
+j:  .BLOCK 2
+numItems:   .BLOCK 2
+temp:   .BLOCK 2
+.END
 
 #+END_SRC
 *** 29题
