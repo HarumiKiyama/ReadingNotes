@@ -35,6 +35,7 @@
 *** 正则表达
 *** 数据压缩
 ** 背景
+* 算法整理
 * 习题集
 #+BEGIN_SRC java :session algs4
 import edu.princeton.cs.algs4.*;
