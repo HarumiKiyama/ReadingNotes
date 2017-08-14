@@ -13,6 +13,7 @@
 介绍JAVA的基础,基本的数据结构(背包,队列,栈),算法性能分析的方法(先对性能提出假设,建立数学模型,用多种实验验证它们)
 *** 1.1
 总结了相关的语法,语言特性和书中将会用到的库
+*** 1.2
 ** 排序
 *** 初级排序算法
 *** 归并排序算法
@@ -39,4 +40,9 @@
 * 习题集
 #+BEGIN_SRC java :session algs4
 import edu.princeton.cs.algs4.*;
+#+END_SRC
+** Chapter one
+*** 1.1
+#+BEGIN_SRC java
+
 #+END_SRC
