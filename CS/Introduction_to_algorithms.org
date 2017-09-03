@@ -5,8 +5,29 @@
 - 全书是如何组织的
 - 这本书和我有什么关系
 * 阅读的目的
-学习基本的算法为之后找到更好的工作打下基础,大概在3个月之内过一遍这本书,习题基本上每个算法相关的题都做一遍吧.
+学习基本的算法为之后找到更好的工作打下基础,大概在3个月之内过一遍这本书,习题基本上每章的题都做一遍吧.
 * 书籍的简单摘要
+This book provides a comprehensive introduction to the modern study of computer algorithms
 * 结构
+** Fundations
+*** Introduction
+The fundation of algorithms
+*** The Role of Algorithms in Computing
+overview of algorithms and their place in modern computing systems
+*** Getting Started
+An insertion sort example
+*** Growth of Functions
+precisely defines asymptotic notation
+*** Divide-and-Conquer
+Delve into divide-and-conquer method.
+*** Probabilistic Analysis and Randomized Algorithms
+Introduce probailistic analysis and randomized algorithms
+** Sorting and Order Statistics
+** Data Structures
+** Advanced Design and Analysis Techniques
+** Advanced Data Structures
+** Graph Algorithms
+** Selected Topics
+** Appendix
 * 习题集
 * 吐槽
