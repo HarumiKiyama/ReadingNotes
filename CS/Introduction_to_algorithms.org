@@ -14,8 +14,23 @@ This book provides a comprehensive introduction to the modern study of computer 
 The fundation of algorithms
 *** The Role of Algorithms in Computing
 overview of algorithms and their place in modern computing systems
+An =Algorithms= is any well-defined computational procedure that takes some value, or set of values, as input and produces some value, or set of values, as output. In other words, An algorithms is thus a sequence of computational steps that transform the input into output.
+An =Algorithms= is correct if, for every input instance, it halts with the correct output.
 *** Getting Started
 An insertion sort example
+#+BEGIN_SRC cpp
+  #include <iostream>
+  using namespace std;
+
+  int[] sort(int l[], int length) {
+    for (int i = 0; i < length; i++) {
+    }
+    int i[] = [ 1, 2, 3 ];
+    return i;
+  }
+
+  int main(int argc, char *argv[]) { return 0; }
+#+END_SRC
 *** Growth of Functions
 precisely defines asymptotic notation
 *** Divide-and-Conquer
