@@ -18,19 +18,30 @@ An =Algorithms= is any well-defined computational procedure that takes some valu
 An =Algorithms= is correct if, for every input instance, it halts with the correct output.
 *** Getting Started
 An insertion sort example
-#+BEGIN_SRC cpp
-  #include <iostream>
-  using namespace std;
-
-  int[] sort(int l[], int length) {
-    for (int i = 0; i < length; i++) {
-    }
-    int i[] = [ 1, 2, 3 ];
-    return i;
-  }
-
-  int main(int argc, char *argv[]) { return 0; }
+#+BEGIN_SRC c
 #+END_SRC
+
+#+BEGIN_SRC cpp
+#+END_SRC
+
+#+BEGIN_SRC python :results output
+  def sort(a: [int]) -> [int]:
+      for j in range(2, len(a)):
+          key = a[j]
+          i = j - 1
+          while i > 0 and a[i] > key:
+              a[i + 1] = a[i]
+              i = i - 1
+          a[i + 1] = key
+      return a
+
+
+  print(sort([1, 3, 4, 5, 2231, 312, 3244]))
+#+END_SRC
+
+#+RESULTS:
+: [1, 3, 4, 5, 312, 2231, 3244]
+
 *** Growth of Functions
 precisely defines asymptotic notation
 *** Divide-and-Conquer
