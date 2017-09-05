@@ -26,22 +26,26 @@ An insertion sort example
 
 #+BEGIN_SRC python :results output
   def sort(a: [int]) -> [int]:
-      for j in range(2, len(a)):
+      for j in range(1,len(a)):
           key = a[j]
           i = j - 1
-          while i > 0 and a[i] > key:
+          while i >= 0 and a[i] > key:
               a[i + 1] = a[i]
               i = i - 1
           a[i + 1] = key
       return a
 
 
-  print(sort([1, 3, 4, 5, 2231, 312, 3244]))
+  print(sort([1, 0, 4, 5, 2231, 312, 3244]))
 #+END_SRC
 
-#+RESULTS:
-: [1, 3, 4, 5, 312, 2231, 3244]
-
+use loop invariant to show why an algorithms is correct, the same as mathematical induction
+- Initialization
+  It is true prior to the first iteration of the loop
+- Maintenance
+  If it is true before an iteration of the loop, it remains true before the next iteration
+- Termination
+  When the loop terminates, the invariant gives us a useful property that helps show that the algorithm is correct
 *** Growth of Functions
 precisely defines asymptotic notation
 *** Divide-and-Conquer
