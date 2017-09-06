@@ -17,7 +17,7 @@ overview of algorithms and their place in modern computing systems
 An =Algorithms= is any well-defined computational procedure that takes some value, or set of values, as input and produces some value, or set of values, as output. In other words, An algorithms is thus a sequence of computational steps that transform the input into output.
 An =Algorithms= is correct if, for every input instance, it halts with the correct output.
 *** Getting Started
-An insertion sort example
+**** insertion sort
 #+BEGIN_SRC c
 #+END_SRC
 
@@ -46,6 +46,11 @@ use loop invariant to show why an algorithms is correct, the same as mathematica
   If it is true before an iteration of the loop, it remains true before the next iteration
 - Termination
   When the loop terminates, the invariant gives us a useful property that helps show that the algorithm is correct
+**** merge sort
+devide-and-conquer approach
+- =Divide= the problem into a number of subproblems that are smaller instances of the same problem
+- =Conquer= the subproblems by solving them recursively
+- =Combine= the solutions to the subproblems into the solution for the original problem
 *** Growth of Functions
 precisely defines asymptotic notation
 *** Divide-and-Conquer
