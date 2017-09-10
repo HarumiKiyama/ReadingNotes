@@ -18,12 +18,6 @@ An =Algorithms= is any well-defined computational procedure that takes some valu
 An =Algorithms= is correct if, for every input instance, it halts with the correct output.
 *** Getting Started
 **** insertion sort
-#+BEGIN_SRC c
-#+END_SRC
-
-#+BEGIN_SRC cpp
-#+END_SRC
-
 #+BEGIN_SRC python :results output
   def sort(a: [int]) -> [int]:
       for j in range(1,len(a)):
@@ -38,7 +32,6 @@ An =Algorithms= is correct if, for every input instance, it halts with the corre
 
   print(sort([1, 0, 4, 5, 2231, 312, 3244]))
 #+END_SRC
-
 use loop invariant to show why an algorithms is correct, the same as mathematical induction
 - Initialization
   It is true prior to the first iteration of the loop
@@ -51,6 +44,10 @@ devide-and-conquer approach
 - =Divide= the problem into a number of subproblems that are smaller instances of the same problem
 - =Conquer= the subproblems by solving them recursively
 - =Combine= the solutions to the subproblems into the solution for the original problem
+**** Analyze merge sort
+- =Divide= the divide step just computes the middle of the subarray, which takes constant time. Thus, $$D(n)=\Theta(1)$$
+- =Conquer=
+- =Combine=
 *** Growth of Functions
 precisely defines asymptotic notation
 *** Divide-and-Conquer
