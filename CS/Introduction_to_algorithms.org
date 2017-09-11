@@ -46,8 +46,8 @@ devide-and-conquer approach
 - =Combine= the solutions to the subproblems into the solution for the original problem
 **** Analyze merge sort
 - =Divide= the divide step just computes the middle of the subarray, which takes constant time. Thus, $$D(n)=\Theta(1)$$
-- =Conquer=
-- =Combine=
+- =Conquer= We recursively solve two subproblems, each of size $$n/2$$, which contributes $$2T(n/2)$$ to running time
+- =Combine= We have already noted that the Merge procedure on an n-element subarray takes time $$\Theta(n)$$, and so $$C(n)=\Theta(n)$$
 *** Growth of Functions
 precisely defines asymptotic notation
 *** Divide-and-Conquer
