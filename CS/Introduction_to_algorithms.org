@@ -50,6 +50,22 @@ devide-and-conquer approach
 - =Combine= We have already noted that the Merge procedure on an n-element subarray takes time $$\Theta(n)$$, and so $$C(n)=\Theta(n)$$
 *** Growth of Functions
 precisely defines asymptotic notation
+**** Theta-notation
+$$\Theta(g(n)) = \{f(n) : \text{ there exist positive constants }c_1,c_2,\text{ and } n_0 \text{ such that } 0 \leq c_1 g(n) \leq f(n) \leq c_2 g(n) \text{ for all } n \geq n_0 \}$$
+**** O-notation
+$$O(g(n)) = \{f(n) : \text{ there exist positive constants } c \text{ and } n_0 \text{ such that } 0 \leq f(n) \leq cg(n) \text{ for all } n \geq n_0 \}$$
+$$\Theta(g(n)) \subseteq O(g(n))$$
+**** Omega-notation
+$$\Omega(g(n)) = \{f(n) : \text{ there exist positive constants } c \text{ and } n_0 \text{ such that } 0 \leq cg(n) \leq f(n) \text{ for all } n \geq n_0 \}$$
+$$\Theta(g(n)) \subseteq \Omega(g(n))$$
+**** o-notation
+denote an upper bound that is not asymptotically tight
+$$o(g(n)) = \{f(n) : \text{ for any positive constant } c > 0 \text{ there exists a constant } n_0 > 0 \text{ such that } 0 \leq f(n) \leq cg(n) \text{ for all } n \geq n_0 \}$$
+$$\lim_{n \to \infty} \frac{f(n)}{g(n)} = 0$$
+**** omega-notation
+denote an lower bound that is not asymptotically tight
+$$\omega(g(n)) = \{f(n) : \text{ for any positive constant } c > 0 \text{ there exists a constant } n_0 > 0 \text{ such that } 0 \leq cg(n) \leq f(n) \text{ for all } n \geq n_0 \}$$
+$$\lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty$$
 *** Divide-and-Conquer
 Delve into divide-and-conquer method.
 *** Probabilistic Analysis and Randomized Algorithms
