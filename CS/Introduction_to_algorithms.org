@@ -68,6 +68,11 @@ $$\omega(g(n)) = \{f(n) : \text{ for any positive constant } c > 0 \text{ there 
 $$\lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty$$
 *** Divide-and-Conquer
 Delve into divide-and-conquer method.
+**** Recurrences
+A recurrences is an equation or inequality that describes a function in terms of its value on smaller inputs.
+for example:
+$$T(n) = \begin{cases} \Theta(1) &\quad \text{if } n = 1\\ 2T(n/2)+\Theta(n) &\quad \text{if } n > 1 \end{case}$$
+
 *** Probabilistic Analysis and Randomized Algorithms
 Introduce probailistic analysis and randomized algorithms
 ** Sorting and Order Statistics
