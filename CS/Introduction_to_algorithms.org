@@ -72,7 +72,14 @@ Delve into divide-and-conquer method.
 A recurrences is an equation or inequality that describes a function in terms of its value on smaller inputs.
 for example:
 $$T(n) = \begin{cases} \Theta(1) &\quad \text{if } n = 1\\ 2T(n/2)+\Theta(n) &\quad \text{if } n > 1 \end{case}$$
-
+Three methods to solve recurrence and obtain asymptotic "\Theta", "O"
+- substitution method
+  guess a bound and then use mathematical induction to prove it
+- recursion-tree method
+  convert the recurrence into a tree whose nodes represent the coasts incurred at various levels of the recursion. and use techniques for bounding summations to solve the recurrence.
+- master method
+  provide bounds for recurrences of the form $$T(n)=aT(n/b)+f(n)$$
+**** The maximum-subarray problem
 *** Probabilistic Analysis and Randomized Algorithms
 Introduce probailistic analysis and randomized algorithms
 ** Sorting and Order Statistics
