@@ -80,6 +80,7 @@ Three methods to solve recurrence and obtain asymptotic "\Theta", "O"
 - master method
   provide bounds for recurrences of the form $$T(n)=aT(n/b)+f(n)$$
 **** The maximum-subarray problem
+
 *** Probabilistic Analysis and Randomized Algorithms
 Introduce probailistic analysis and randomized algorithms
 ** Sorting and Order Statistics
