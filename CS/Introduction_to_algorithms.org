@@ -28,8 +28,6 @@ An =Algorithms= is correct if, for every input instance, it halts with the corre
               i = i - 1
           a[i + 1] = key
       return a
-
-
   print(sort([1, 0, 4, 5, 2231, 312, 3244]))
 #+END_SRC
 use loop invariant to show why an algorithms is correct, the same as mathematical induction
