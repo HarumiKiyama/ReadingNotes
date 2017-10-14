@@ -83,6 +83,8 @@ using Dynamic programming time coast $$\Theta(n)$$
 *** Probabilistic Analysis and Randomized Algorithms
 Introduce probailistic analysis and randomized algorithms
 ** Sorting and Order Statistics
+*** Introduction
+*** Heapsort
 ** Data Structures
 ** Advanced Design and Analysis Techniques
 ** Advanced Data Structures
