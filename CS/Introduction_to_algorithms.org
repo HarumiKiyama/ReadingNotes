@@ -80,6 +80,9 @@ Three methods to solve recurrence and obtain asymptotic "\Theta", "O"
 **** The maximum-subarray problem
 using Dynamic programming time coast $$\Theta(n)$$
 **** matrix multiplication
+**** The substitution method for solving recurrences
+1. guess the form of the solution
+2. use mathematical induction to find the constants and show that solution works
 *** Probabilistic Analysis and Randomized Algorithms
 Introduce probailistic analysis and randomized algorithms
 ** Sorting and Order Statistics
