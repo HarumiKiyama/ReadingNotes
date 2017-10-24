@@ -83,6 +83,12 @@ using Dynamic programming time coast $$\Theta(n)$$
 **** The substitution method for solving recurrences
 1. guess the form of the solution
 2. use mathematical induction to find the constants and show that solution works
+**** The master method for solving recurrences
+Let $$a\geq 1$$ and $$b > 1$$ be constants, let $$f(n)$$ be a function, and let $$T(n)$$ be defined on the nonnegative integers by the recurrence
+$$T(n)=aT(n/b)+f(n)$$
+then $$T(n)$$ has the follow-ing asymptotic bounds:
+1. If $$f(n)=O(n)$$
+
 *** Probabilistic Analysis and Randomized Algorithms
 Introduce probailistic analysis and randomized algorithms
 ** Sorting and Order Statistics
