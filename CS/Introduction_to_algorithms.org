@@ -87,8 +87,9 @@ using Dynamic programming time coast $$\Theta(n)$$
 Let $$a\geq 1$$ and $$b > 1$$ be constants, let $$f(n)$$ be a function, and let $$T(n)$$ be defined on the nonnegative integers by the recurrence
 $$T(n)=aT(n/b)+f(n)$$
 then $$T(n)$$ has the follow-ing asymptotic bounds:
-1. If $$f(n)=O(n)$$
-
+1. If $$f(n)=O(n^{\log_{b} a-\epsilon})$$ for some constant $$\epsilon > 0$$, then  $$T(n)=\Theta(n^{\log_b a})$$
+2. If $$f(n)=\Theta(n^{\log_b a})$$ , then $$T(n)=\Theta(n^{\log_b a}\lg n)$$
+3. If $$f(n)=\Omega(n^{\log_b a+\epsilon})$$ for some constant $$\epsilong > 0$$, and if $$af(n/b) \leq cf(n)$$ for some constant $$c<1$$ and all sufficiently large $$n$$, then $$T(n)=\Theta(f(n))$$
 *** Probabilistic Analysis and Randomized Algorithms
 Introduce probailistic analysis and randomized algorithms
 ** Sorting and Order Statistics
