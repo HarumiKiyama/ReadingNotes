@@ -94,7 +94,50 @@ then $$T(n)$$ has the follow-ing asymptotic bounds:
 Introduce probailistic analysis and randomized algorithms
 ** Sorting and Order Statistics
 *** Introduction
+| Algorithm      | Worst-case         | Average-case/expected         |
+|                | running time       | running time                  |
+|----------------+--------------------+-------------------------------|
+| Insertion sort | $$\Theta(n^2)$$    | $$\Theta(n^2)$$               |
+| Merge sort     | $$\Theta(n\lg n)$$ | $$\Theta(n\lg n)$$            |
+| Heapsort       | $$\Theta(n\lg n)$$ | --                            |
+| Quicksort      | $$\Theta(n^2)$$    | $$\Theta(n\lg n)$$ (expected) |
+| Counting sort  | $$\Theta(k+n)$$    | $$\Theta(k+n)$$               |
+| Radix sort     | $$\Theta(d(n+k))$$ | $$\Theta(d(n+k))$$            |
+| Bucket sort    | $$\Theta(n^2)$$    | $$\Theta(n)$$ (average-case)  |
 *** Heapsort
+#+BEGIN_SRC python
+  def parent(i):
+      return i / 2
+
+
+  def left(i):
+      return 2 * i
+
+
+  def right(i):
+      return 2 * i + 1
+
+
+  def max_heapify(A, i):
+      l = left(i)
+      r = right(i)
+      if l <= A.heap_size and A[l] > A[i]:
+          largest = l
+      else:
+          largest = i
+      if r <= A.heap_size and A[r] > A[largest]:
+          largest = r
+      if largest != i:
+          exchange(A[i], A[largest])
+          max_heapify(A, largest)
+
+
+  def exchange(f, s):
+      pass
+#+END_SRC
+*** Quicksort
+*** Sorting in Linear Time
+*** Medians and Order Statistics
 ** Data Structures
 ** Advanced Design and Analysis Techniques
 ** Advanced Data Structures
