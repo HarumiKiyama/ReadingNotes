@@ -105,7 +105,29 @@ Introduce probailistic analysis and randomized algorithms
 | Radix sort     | $$\Theta(d(n+k))$$ | $$\Theta(d(n+k))$$            |
 | Bucket sort    | $$\Theta(n^2)$$    | $$\Theta(n)$$ (average-case)  |
 *** Heapsort
-#+BEGIN_SRC python
+#+BEGIN_SRC python :results output
+  class NewList:
+      def __init__(self, l):
+          self._l = l
+          self.heap_size = len(l)
+
+      def __len__(self):
+          return len(self._l)
+
+      def __getitem__(self, n):
+          return self._l[n - 1]
+
+      def __setitem__(self, n, val):
+          self._l[n - 1] = val
+
+      @classmethod
+      def from_list(cls, l):
+          return cls(l)
+
+      def __repr__(self):
+          return self._l.__repr__()
+
+
   def parent(i):
       return i / 2
 
@@ -128,13 +150,41 @@ Introduce probailistic analysis and randomized algorithms
       if r <= A.heap_size and A[r] > A[largest]:
           largest = r
       if largest != i:
-          exchange(A[i], A[largest])
+          exchange(A, i, largest)
           max_heapify(A, largest)
 
 
-  def exchange(f, s):
-      pass
+  def exchange(l, i, j):
+      l[i], l[j] = l[j], l[i]
+
+
+  def build_max_heap(A):
+      A.heap_size = len(A)
+      for i in range(len(A) // 2, 0, -1):
+          max_heapify(A, i)
+
+
+  def heapsort(A):
+      build_max_heap(A)
+      for i in range(len(A), 1, -1):
+          exchange(A, 1, i)
+          A.heap_size -= 1
+          max_heapify(A, 1)
+
+
+  def main():
+      l = NewList.from_list([4, 1, 5, 0, 7, 9, 8])
+      heapsort(l)
+      print(l)
+
+
+  if __name__ == '__main__':
+      main()
 #+END_SRC
+
+#+RESULTS:
+: [0, 1, 4, 5, 7, 8, 9]
+
 *** Quicksort
 *** Sorting in Linear Time
 *** Medians and Order Statistics
