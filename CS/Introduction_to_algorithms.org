@@ -184,7 +184,6 @@ Introduce probailistic analysis and randomized algorithms
 
 #+RESULTS:
 : [0, 1, 4, 5, 7, 8, 9]
-
 *** Quicksort
 *** Sorting in Linear Time
 *** Medians and Order Statistics
