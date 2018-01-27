@@ -227,7 +227,7 @@ Any comparison sort must make $$\Omega(n\lg n)$$ comparisons in the worst case t
 **** counting sort
 #+BEGIN_SRC python
   def COUNT_SORT(A, B, k):
-      c = [0 for _ in range(k + 1)]
+      c = [-1 for _ in range(k + 1)]
       for j in range(len(A)):
           c[A[j]] = c[A[j]] + 1
       for i in range(k + 1):
@@ -237,6 +237,12 @@ Any comparison sort must make $$\Omega(n\lg n)$$ comparisons in the worst case t
           c[A[j]] = c[A[j]] - 1
 #+END_SRC
 **** radix sort
+#+BEGIN_SRC python
+  def RADIX_SORT(A, d):
+      for i in range(d):
+          # use a stable sort to sort array A on digit i
+          pass
+#+END_SRC
 **** bucket sort
 *** Medians and Order Statistics
 ** Data Structures
