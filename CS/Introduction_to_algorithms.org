@@ -223,6 +223,21 @@ quicksort is often the best practical choice for sorting
 In worst-case quicksort coasts $$\Theta(n^2)$$ , however in best-case coasts $$\Theta(n\lg n)$$. If partitions alternate between worst-case and best-case, the coast is also $$\Theta(n\lg n)$$.
 randomized version of quicksort is the sorting algorithm of choice for large enough inputs.
 *** Sorting in Linear Time
+Any comparison sort must make $$\Omega(n\lg n)$$ comparisons in the worst case to sort n elements
+**** counting sort
+#+BEGIN_SRC python
+  def COUNT_SORT(A, B, k):
+      c = [0 for _ in range(k + 1)]
+      for j in range(len(A)):
+          c[A[j]] = c[A[j]] + 1
+      for i in range(k + 1):
+          c[i] = c[i] + c[i - 1]
+      for j in range(len(A) - 1, 0, -1):
+          B[c[A[j]]] = A[j]
+          c[A[j]] = c[A[j]] - 1
+#+END_SRC
+**** radix sort
+**** bucket sort
 *** Medians and Order Statistics
 ** Data Structures
 ** Advanced Design and Analysis Techniques
