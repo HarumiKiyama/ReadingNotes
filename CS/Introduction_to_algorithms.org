@@ -245,6 +245,10 @@ Any comparison sort must make $$\Omega(n\lg n)$$ comparisons in the worst case t
 #+END_SRC
 **** bucket sort
 *** Medians and Order Statistics
+- Input
+  A set $$A$$ of $$n$$ numbers and an integer $$i$$, with $$1\leq i \leq n$$
+- Output
+  The element $$x \in A$$ that is larger than exactly $$i-1$$ other elements of $$A$$
 ** Data Structures
 ** Advanced Design and Analysis Techniques
 ** Advanced Data Structures
