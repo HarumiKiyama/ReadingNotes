@@ -255,5 +255,4 @@ Any comparison sort must make $$\Omega(n\lg n)$$ comparisons in the worst case t
 ** Graph Algorithms
 ** Selected Topics
 ** Appendix
-* 习题集
 * 吐槽
