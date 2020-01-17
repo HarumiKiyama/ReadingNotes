@@ -1,0 +1,6 @@
+#+TITLE: README
+* project description
+A bunch of notes produced by myself, which are about science history, primatology, computer science, emacs, etc.
+Some of these notes were integrated with ~org-brain~.
+* project purpose
+for maintaining my knownlogy and for convenience of reviewing my reading notes.
